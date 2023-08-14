@@ -1,0 +1,11 @@
+@mixin margenes{
+    margin: 0;
+  padding: 0;
+} 
+
+@mixin personalizar($ancho,$alto,$color){
+
+  width: $ancho;
+  height: $alto;
+  background-color: $color;
+}

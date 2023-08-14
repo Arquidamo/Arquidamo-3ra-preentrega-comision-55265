@@ -1,0 +1,20 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "\"tercera entrega comision 55265\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"https://github.com/Arquidamo/Arquidamo-3ra-preentrega-comision-55265.git\""
+  },
+  "keywords": [
+    "\"javascript",
+    "html",
+    "css\""
+  ],
+  "author": "\"Arquidamo de Esparta\"",
+  "license": "ISC"
+}

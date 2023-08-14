@@ -1,0 +1,17 @@
+@import "mixins";
+
+
+*{
+      @include margenes;    
+    box-sizing: border-box;
+}
+
+
+body{
+  background-color: black;
+  color: antiquewhite;
+  button{
+    @include personalizar(150px,60px,red);
+  }
+}
+
