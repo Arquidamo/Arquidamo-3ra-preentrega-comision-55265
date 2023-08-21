@@ -7,18 +7,57 @@ class Whisky {
         this.stock=stock;
     }
 }
-let w1=new Whisky("chivas","blend",5400,8);
-let w2=new Whisky("johnny walker","blend",5400,4);
-let w3=new Whisky("macallans","single",18000,2);
-let w4=new Whisky("jameson","blend",4500,8);
-let w5=new Whisky("jack daniels","straith bourbon", 6000,10);
-let w6=new Whisky("jim bean","straith bourbon", 4900,10);
 
 /* los almaceno en una lista*/
-let Lista =[w1,w2,w3,w4,w5,w6];
+let Lista =[
+  new Whisky("chivas","blend",5400,8),
+  new Whisky("johnny walker","blend",5400,4),
+  new Whisky("macallans","single",18000,2),
+  new Whisky("jameson","blend",4500,8),
+  new Whisky("jack daniels","straith bourbon", 6000,10),
+  new Whisky("jim bean","straith bourbon", 4900,10)
+];
+
+/*mostrarlos en una tabla*/
+/* presentaba un error la tabla  utilice
+ chat gtp para que me lo corrigiera 
+ estaba llamando mal las variables y  no me daba 
+ cuenta estaba cargando un array vacio */ 
+Lista.forEach(Whisky=>{
+let fila=document.createElement("tr");
+let brandcell=document.createElement("td");
+let maltcell=document.createElement("td");
+let stockcell=document.createElement("td");
+let pricecell=document.createElement("td");
+
+brandcell.textContent=Whisky.brand;
+maltcell.textContent=Whisky.malt;
+stockcell.textContent=Whisky.stock;
+pricecell.textContent=Whisky.price;
+
+fila.appendChild(brandcell);
+      fila.appendChild(maltcell);
+      fila.appendChild(stockcell);
+      fila.appendChild(pricecell);
+
+      document.querySelector("table").appendChild(fila);
+
+
+})
+
+
+
 
 /*localstorage y session storage*/ 
-localStorage.setItem("listaLocal",JSON.stringify(Lista));
+
+
+function Loca(){
+  localStorage.setItem("listaLocal",JSON.stringify(Lista));
+}
+
+
+
+
 
 
 function SeleccionarPecado(){
@@ -96,6 +135,7 @@ function SeleccionarPecado(){
             }
         
             Lista.push(producto);
+            Loca();
         
             Swal.fire({
               icon: "success",
